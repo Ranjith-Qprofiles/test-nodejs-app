@@ -1,26 +1,24 @@
 pipeline { 
   
    agent any
-   tools {
-        NodeJS 'node16'
-    }
+
    stages {
    
-     stage('Install Dependencies') { 
+     stage('Build') { 
         steps { 
-           sh 'npm install' 
+           sh 'echo "Build Application..."'
         }
      }
      
      stage('Test') { 
         steps { 
-           sh 'echo "testing application..."'
+           sh 'echo "Testing Application..."'
         }
       }
 
-         stage("Deploy application") { 
+         stage("Deploy") { 
          steps { 
-           sh 'echo "deploying application..."'
+           sh 'echo "Deploying Application..."'
          }
 
      }
