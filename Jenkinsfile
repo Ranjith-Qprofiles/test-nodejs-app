@@ -12,7 +12,7 @@ pipeline {
      
      stage('Test') { 
         steps { 
-            'echo "Testing Application..."'
+           sh 'echo "Testing Application..."'
         }
       }
 
